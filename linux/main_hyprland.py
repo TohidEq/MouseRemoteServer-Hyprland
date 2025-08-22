@@ -27,9 +27,11 @@ def right_mouse_up():
 
 # 🖱️ Scroll
 def scroll_up():
+    #no idea
     pass
 
 def scroll_down():
+    #no idea
     pass
 
 
@@ -78,6 +80,7 @@ def parseInputCommand(input):
     obj = json.loads(input)
     inputType = int(obj['dwFlags'])
     inputKeyboard = int(obj['type'])
+    inputKeyboardKeyId= int(obj['wVk'])
     print(input)
 
     # --------------------
@@ -88,7 +91,7 @@ def parseInputCommand(input):
         inputType 0 -> Key Pressed
         inputType 2 -> Key Released
 
-        obj["mVk"] -> KeyId
+        obj["wVk"] -> KeyId
 
         Visit:
         /usr/include/linux/input-event-codes.h
@@ -108,6 +111,10 @@ def parseInputCommand(input):
         - releasing "x"
             > subprocess.run(["ydotool", "key", "45:0"])
         """
+
+        # use this for exporting keys ids into ./keys/app_key.py (manualy :D)
+        # subprocess.run(["ydotool", "type", str(inputKeyboardKeyId)])
+
         pass
     # --------------------
     else:
