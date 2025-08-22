@@ -91,8 +91,10 @@ def parseInputCommand(input):
         appKeyId = obj["wVk"]
 
         # use this for exporting keys ids into ./keys/app_key.py (manualy :D)
+        # HERE TO FIX YOUR PROBLEM (inshallah)
         # subprocess.run(["ydotool", "type", str(appKeyId)])
 
+        # HERE U START COMMENTING
         if appKeyId in app_keys.appKeys:
             key_pressed_name = app_keys.appKeys[appKeyId]
             if key_pressed_name in system_keys.systemKeys:
@@ -110,6 +112,7 @@ def parseInputCommand(input):
             subprocess.run(["ydotool", "key", key_id_with_action])
         else:
             print(f"\n----------\nkey not found!!!\n{appKeyId}")
+        # HERE U END COMMENTING
     # --------------------
     else:
         # move mouse

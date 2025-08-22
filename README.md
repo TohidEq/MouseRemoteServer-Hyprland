@@ -71,8 +71,27 @@ How the program works:-
 - Run **main_hyprland.py** file and control your Linux device
   > `python main_hyprland.py`
 
+### Keyboard Problem?
+
+- Open terminal in `./linux/keys`
+- Run `python export_system_keys.py`
+- Try running `./linux/main_hyprland.py` again
+
+- (i hope u not need to read this section below)
+- If still not works try :
+  > - Edit `./linux/main_hyprland.py`:
+  > - find "HERE TO FIX YOUR PROBLEM" and uncomment one line under that
+  > - find `# HERE U START COMMENTING` and start commenting
+  > - until u reach to the `# HERE U END COMMENTING`
+  > - save and run the `./linux/main_hyprland.py` file
+  > - edit `./linux/keys/app_keys.py` and replce every "key" in dictionary
+  > - save the file and ...
+  > - **you should undo comment/uncomment after all**
+
 ## TODO:
 
-- [ ] Keyboard support (hyprland)
+- [ ] Fix: keyboard btn (R) not respond (nothing received from android)
+
+- [x] Keyboard support (hyprland)
 
 - [x] Mouse support (hyprland)
