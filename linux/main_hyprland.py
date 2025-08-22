@@ -38,6 +38,7 @@ def scroll_down():
 # -------------------------------------------
 
 
+from keys import app_keys, system_keys
 
 
 
@@ -80,42 +81,35 @@ def parseInputCommand(input):
     obj = json.loads(input)
     inputType = int(obj['dwFlags'])
     inputKeyboard = int(obj['type'])
-    inputKeyboardKeyId= int(obj['wVk'])
     print(input)
 
     # --------------------
     # Keyboard settings here
     if inputKeyboard == 1:
-        """
-        inputType("dwFlags")
-        inputType 0 -> Key Pressed
-        inputType 2 -> Key Released
-
-        obj["wVk"] -> KeyId
-
-        Visit:
-        /usr/include/linux/input-event-codes.h
-
-        There is some keys and their ids,
-        It's not same as this app ids,
-        > this app: (a: 65)
-        > input-event-codes.h: (a: 30)
-
-
-        For example:
-            > x = 45
-
-        Then (45:1 and 45:0)
-        - pressing "x":
-            > subprocess.run(["ydotool", "key", "45:1"])
-        - releasing "x"
-            > subprocess.run(["ydotool", "key", "45:0"])
-        """
+        # default value (-1) means no key founded
+        systemKeyId = "-1"
+        appKeyId = obj["wVk"]
 
         # use this for exporting keys ids into ./keys/app_key.py (manualy :D)
-        # subprocess.run(["ydotool", "type", str(inputKeyboardKeyId)])
+        # subprocess.run(["ydotool", "type", str(appkeyId)])
 
-        pass
+        if appKeyId in app_keys.appKeys:
+            key_pressed_name = app_keys.appKeys[appKeyId]
+            if key_pressed_name in system_keys.systemKeys:
+                systemKeyId=system_keys.systemKeys[key_pressed_name]
+
+        if systemKeyId != "-1":
+            # this var format is like: "keyId:press/release(1/0)" -> "46:1" , "46:0"
+            key_id_with_action = f"{systemKeyId}:"
+
+            if inputType == 0: # pressing
+                key_id_with_action +="1"
+            elif inputType == 2: # releasing
+                key_id_with_action +="0"
+
+            subprocess.run(["ydotool", "key", key_id_with_action])
+        else:
+            print(f"\n----------\nkey not found!!!\n{appKeyId}")
     # --------------------
     else:
         # move mouse
