@@ -91,7 +91,7 @@ def parseInputCommand(input):
         appKeyId = obj["wVk"]
 
         # use this for exporting keys ids into ./keys/app_key.py (manualy :D)
-        # subprocess.run(["ydotool", "type", str(appkeyId)])
+        # subprocess.run(["ydotool", "type", str(appKeyId)])
 
         if appKeyId in app_keys.appKeys:
             key_pressed_name = app_keys.appKeys[appKeyId]
