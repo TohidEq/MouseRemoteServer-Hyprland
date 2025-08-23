@@ -110,7 +110,7 @@ def parseInputCommand(input):
         appKeyId = obj["wVk"]
 
         # use this for exporting keys ids into ./keys/app_key.py (manualy :D)
-        # HERE TO FIX YOUR PROBLEM (inshallah)
+        # HERE TO FIX YOUR PROBLEM (inshallah) uncomment one line below this
         # subprocess.run(["ydotool", "type", str(appKeyId)])
 
         # HERE U START COMMENTING

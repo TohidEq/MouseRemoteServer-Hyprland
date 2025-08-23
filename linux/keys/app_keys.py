@@ -13,32 +13,48 @@ appKeys ={
   "121":"KEY_F10",
   "122":"KEY_F11",
   "123":"KEY_F12",
+
   "13":"KEY_ENTER",
+
   "162":"KEY_LEFTCTRL",
   "163":"KEY_RIGHTCTRL",
+
   "160":"KEY_LEFTSHIFT",
   "161":"KEY_RIGHTSHIFT",
+
   "164":"KEY_LEFTALT",
   "165":"KEY_RIGHTALT",
-  "91":"KEY_LEFTMETA",
+
   "20":"KEY_CAPSLOCK",
+  "8":"KEY_BACKSPACE",
   "9":"KEY_TAB",
+
   "27":"KEY_ESC",
+  "35":"KEY_END",
   "44":"KEY_PRINT",
   "45":"KEY_INSERT",
   "46":"KEY_DELETE",
-  "8":"KEY_BACKSPACE",
-  "192":"KEY_GRAVE",
-  "220":"KEY_BACKSLASH",
-  "191":"KEY_SLASH",
-  "190":"KEY_DOT",
-  "188":"KEY_COMMA",
-  "222":"KEY_APOSTROPHE",
-  "186":"KEY_SEMICOLON",
-  "219":"KEY_LEFTBRACE",
-  "221":"KEY_RIGHTBRACE",
-  "187":"KEY_EQUAL",
-  "189":"KEY_MINUS",
+
+  "91":"KEY_LEFTMETA", #win key
+  "192":"KEY_GRAVE", # >> `
+  "220":"KEY_BACKSLASH", # >> \
+  "191":"KEY_SLASH", # >> /
+  "190":"KEY_DOT", # >> .
+  "188":"KEY_COMMA", # >> ,
+  "222":"KEY_APOSTROPHE", # >> '
+  "186":"KEY_SEMICOLON", # >> ;
+  "219":"KEY_LEFTBRACE", # >> [
+  "221":"KEY_RIGHTBRACE", # >> ]
+  "187":"KEY_EQUAL", # >> =
+  "189":"KEY_MINUS", # >> -
+
+  "32":"KEY_SPACE",
+
+  "37":"KEY_LEFT",
+  "39":"KEY_RIGHT",
+  "38":"KEY_UP",
+  "40":"KEY_DOWN",
+
   "48":"KEY_0",
   "49":"KEY_1",
   "50":"KEY_2",
@@ -49,7 +65,8 @@ appKeys ={
   "55":"KEY_7",
   "56":"KEY_8",
   "57":"KEY_9",
-  "32":"KEY_SPACE",
+
+
   "65":"KEY_A",
   "66":"KEY_B",
   "67":"KEY_C",
@@ -76,10 +93,7 @@ appKeys ={
   "88":"KEY_X",
   "89":"KEY_Y",
   "90":"KEY_Z",
-  "37":"KEY_LEFT",
-  "39":"KEY_RIGHT",
-  "38":"KEY_UP",
-  "40":"KEY_DOWN",
+
 }
 
 
