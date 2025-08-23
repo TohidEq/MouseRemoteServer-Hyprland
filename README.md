@@ -94,4 +94,6 @@ How the program works:-
 
 - [x] Keyboard support (hyprland)
 
-- [x] Mouse support (hyprland)
+- [x] Mouse Wheel support (ihyprland)
+
+- [x] Mouse support (ihyprland)
